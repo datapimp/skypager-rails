@@ -2,6 +2,7 @@
   "name": "skypager-rails",
   "private": true,
   "scripts": {
+    "start:hot": "./node_modules/.bin/skypager-pkg-cli start --development --profile webDev --port 3001 --hot --public-path=http://localhost:3001/",
     "build:dll": "./node_modules/.bin/skypager-pkg-cli build webDev --generate-dll --dll-library-name=application --dll-name=application --disable-copy-plugin --disable-html-plugin --disable-dll-plugin",
     "prebuild:dll": "rm -rf public/*.dll.j*",
     "build:dev": "./node_modules/.bin/skypager-pkg-cli build webDev --watch",

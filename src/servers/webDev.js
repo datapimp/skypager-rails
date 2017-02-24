@@ -15,13 +15,6 @@ export function create(options = {}, context = {}) {
       ...project.argv,
     })
 
-  const c = compiler.getConfig() 
-  console.log(JSON.stringify({
-    entry: c.entry,
-    resolve: c.resolve,
-    context: c.context,
-  }, null, 2))
-
   const dev = project.servers.lookup('development').create
 
   return dev.call(this, { ...options, compiler }, { ...this.context, ...context})
