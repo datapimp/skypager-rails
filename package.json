@@ -1,0 +1,35 @@
+{
+  "name": "skypager-rails",
+  "private": true,
+  "scripts": {
+    "build:dll": "./node_modules/.bin/skypager-pkg-cli build webDev --generate-dll --dll-library-name=application --dll-name=application --disable-copy-plugin --disable-html-plugin --disable-dll-plugin",
+    "prebuild:dll": "rm -rf public/*.dll.j*",
+    "build:dev": "./node_modules/.bin/skypager-pkg-cli build webDev --watch",
+    "postbuild:dll": "mv public/webDev.dll.js public/application.dll.js && mv public/webDev.dll.json public/application.dll.json"
+  },
+  "skypager": {
+    "paths": {
+      "output": "dist",
+      "public": "public",
+      "bundles": "public"
+    },
+    "sourcePaths": [
+      "app/javascript/packs",
+      "app/components",
+      "src"
+    ]
+  },
+  "dependencies": {
+    "babel-preset-react-hmre": "^1.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "semantic-ui-css": "^2.2.9",
+    "semantic-ui-react": "^0.66.0",
+    "skypager": "^17.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-skypager": "latest",
+    "rails-erb-loader": "^3.2.0"
+  }
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SkypagerRails</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag '/semantic.min.css' %>
+    <%= javascript_include_tag '/application.dll.js' %>
+  </head>
+  <body>
+    <div id="app"> </div>
+    <div style='display:none'><%= yield %></div>
+    <%= javascript_include_tag('http://localhost:3001/packs/application.js') %>
+  </body>
+</html>

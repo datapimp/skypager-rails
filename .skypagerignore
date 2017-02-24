@@ -1,0 +1,10 @@
+config/**
+db/**
+lib/**
+tmp/cache/**
+tmp/**
+vendor/**
+test/**
+public/**
+Rakefile
+**/*.ru
